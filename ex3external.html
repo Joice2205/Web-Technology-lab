@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Watchaa!! - Movie Genres</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>🎬 Watchaa!!</header>
+
+  <nav>
+    <button onclick="filterMovies('all')">All</button>
+    <button onclick="filterMovies('action')">Action</button>
+    <button onclick="filterMovies('feel good')">Feel Good</button>
+    <button onclick="filterMovies('romance')">Romance</button>
+  </nav>
+
+  <section id="movies">
+
+    <!-- Action Movies -->
+    <div class="genre" data-genre="action">
+      <h2>Action Movies</h2>
+      <div class="movie-list">
+        <div class="movie">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkunSyp4E8nNq27_mWKUaoHJJmIbn768hWAw&s" alt="Billa">
+          <p>Billa</p>
+        </div>
+        <div class="movie">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO_VfYCWkjRmcFHGrOVJ2atdgAfKfEmaGjag&s" alt="Vada Chennai">
+          <p>Vada Chennai</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feel Good Movies -->
+    <div class="genre" data-genre="feel good">
+      <h2>Feel Good Movies</h2>
+      <div class="movie-list">
+        <div class="movie">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0ZmC8hBMbT4DcbzUlNnF-Lj4UhqpIivpVTMxzQSrcn9G8OZUK4rt4quBx9iBXtPHpk5jcAZdTxC3G2KEElpRr_3qz7LG0OKp2vgJujfXIB3rDOz7c1ph545bw_v591UbnqkpUAkGsgfu38nLp-Dk0gmfWmh5QDUJh3NsDG9nevC1p3vD6NKo-P6ra1XNE/w1200-h630-p-k-no-nu/12.jpg" alt="Meiyalagan">
+          <p>Meiyalagan</p>
+        </div>
+        <div class="movie">
+          <img src="https://m.media-amazon.com/images/M/MV5BOTBkMmJjOGItMTIzZi00NTYzLWFkNmMtNjNiZGZlYmM4MzkyXkEyXkFqcGc@._V1_.jpg" alt="Good Night">
+          <p>Good Night</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Romantic Movies -->
+    <div class="genre" data-genre="romance">
+      <h2>Romantic Movies</h2>
+      <div class="movie-list">
+        <div class="movie">
+          <img src="https://static.digit.in/OTT/v2/images/alaipayuthey-1253004.jpg" alt="Alaipayuthey">
+          <p>Alaipayuthey</p>
+        </div>
+        <div class="movie">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr2IUCBrepmkShw5RBgd9HnBJT2n9uX_tjvA&s" alt="Vaaranam Aayiram">
+          <p>Vaaranam Aayiram</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+    function filterMovies(genre) {
+      const genres = document.querySelectorAll('.genre');
+      genres.forEach(g => {
+        g.style.display = (genre === 'all' || g.dataset.genre === genre) ? 'block' : 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>

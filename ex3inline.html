@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Watchaa!! - Movie Genres</title>
+</head>
+<body style="margin:0; font-family:Arial, sans-serif; background-color:#111; color:white;">
+
+  <header style="background-color:#ffb07c; padding:15px; text-align:center; font-size:1.8rem; font-weight:bold;">
+    🎬 Watchaa!!
+  </header>
+
+  <nav style="display:flex; justify-content:center; flex-wrap:wrap; gap:10px; background-color:#222; padding:10px;">
+    <button onclick="filterMovies('all')" style="background-color:#ffb07c; border:none; padding:10px 15px; color:white; cursor:pointer; border-radius:5px;">All</button>
+    <button onclick="filterMovies('action')" style="background-color:#ffb07c; border:none; padding:10px 15px; color:white; cursor:pointer; border-radius:5px;">Action</button>
+    <button onclick="filterMovies('feel good')" style="background-color:#ffb07c; border:none; padding:10px 15px; color:white; cursor:pointer; border-radius:5px;">Feel Good</button>
+    <button onclick="filterMovies('romance')" style="background-color:#ffb07c; border:none; padding:10px 15px; color:white; cursor:pointer; border-radius:5px;">Romance</button>
+  </nav>
+
+  <section id="movies" style="padding:20px;">
+
+    <!-- Action Movies -->
+    <div class="genre" data-genre="action">
+      <h2 style="color:#ffb07c;">Action Movies</h2>
+      <div class="movie-list" style="display:flex; gap:15px; overflow-x:auto; padding-bottom:10px; scrollbar-width:thin;">
+        <div class="movie" style="min-width:200px; background-color:#1a1a1a; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.5);">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkunSyp4E8nNq27_mWKUaoHJJmIbn768hWAw&s" alt="Action Movie 1" style="width:100%; height:300px; object-fit:cover; display:block;">
+          <p style="margin:10px; font-weight:bold; text-align:center;">Billa</p>
+        </div>
+        <div class="movie" style="min-width:200px; background-color:#1a1a1a; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.5);">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO_VfYCWkjRmcFHGrOVJ2atdgAfKfEmaGjag&s" alt="Action Movie 2" style="width:100%; height:300px; object-fit:cover; display:block;">
+          <p style="margin:10px; font-weight:bold; text-align:center;">Vada Chennai</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feel Good Movies -->
+    <div class="genre" data-genre="feel good">
+      <h2 style="color:#ffb07c;">Feel Good Movies</h2>
+      <div class="movie-list" style="display:flex; gap:15px; overflow-x:auto; padding-bottom:10px; scrollbar-width:thin;">
+        <div class="movie" style="min-width:200px; background-color:#1a1a1a; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.5);">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0ZmC8hBMbT4DcbzUlNnF-Lj4UhqpIivpVTMxzQSrcn9G8OZUK4rt4quBx9iBXtPHpk5jcAZdTxC3G2KEElpRr_3qz7LG0OKp2vgJujfXIB3rDOz7c1ph545bw_v591UbnqkpUAkGsgfu38nLp-Dk0gmfWmh5QDUJh3NsDG9nevC1p3vD6NKo-P6ra1XNE/w1200-h630-p-k-no-nu/12.jpg" alt="Comedy Movie 1" style="width:100%; height:300px; object-fit:cover; display:block;">
+          <p style="margin:10px; font-weight:bold; text-align:center;">Meiyalagan</p>
+        </div>
+        <div class="movie" style="min-width:200px; background-color:#1a1a1a; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.5);">
+          <img src="https://m.media-amazon.com/images/M/MV5BOTBkMmJjOGItMTIzZi00NTYzLWFkNmMtNjNiZGZlYmM4MzkyXkEyXkFqcGc@._V1_.jpg" alt="Comedy Movie 2" style="width:100%; height:300px; object-fit:cover; display:block;">
+          <p style="margin:10px; font-weight:bold; text-align:center;">Good Night</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Romantic Movies -->
+    <div class="genre" data-genre="romance">
+      <h2 style="color:#ffb07c;">Romantic Movies</h2>
+      <div class="movie-list" style="display:flex; gap:15px; overflow-x:auto; padding-bottom:10px; scrollbar-width:thin;">
+        <div class="movie" style="min-width:200px; background-color:#1a1a1a; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.5);">
+          <img src="https://static.digit.in/OTT/v2/images/alaipayuthey-1253004.jpg" alt="Drama Movie 1" style="width:100%; height:300px; object-fit:cover; display:block;">
+          <p style="margin:10px; font-weight:bold; text-align:center;">Alaipayuthey</p>
+        </div>
+        <div class="movie" style="min-width:200px; background-color:#1a1a1a; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.5);">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr2IUCBrepmkShw5RBgd9HnBJT2n9uX_tjvA&s" alt="Drama Movie 2" style="width:100%; height:300px; object-fit:cover; display:block;">
+          <p style="margin:10px; font-weight:bold; text-align:center;">Vaaranam Aayiram</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+</body>
+</html>
